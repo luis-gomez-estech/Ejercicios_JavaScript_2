@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 23</title>
+</head>
+<body>
+	
+  	<!-- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado pero utilizando el método includes.
+
+  	 -->	
+
+	<script type="text/javascript">
+	
+	var texto="Hola que tal";
+
+	// Recorremos la frase con un for y con la funcion array.includes(), o en este caso, 
+	// texto[i].includes('a')||texto[i].includes('e')||texto[i].includes('i')||texto[i].includes('o')||texto[i].includes('u')
+	// le estamos diciendo que si conforme va recorriendo el array encuentra un valor de i
+	// que es igual a, "a" o "e" o "i" o "o" o "u", seguidamente con un break le decimos,
+	// que pare el bucle, y posteriormente con texto[i] obtenemos que vocal es la primera que ha encontrado
+
+    for (var i=0;i<texto.length;i++) {
+        if (texto[i].includes('a')||texto[i].includes('e')||texto[i].includes('i')||texto[i].includes('o')||texto[i].includes('u')) {
+         
+            break;
+        }
+    }
+    
+    document.write("<br>La primera vocal es de la palabra, " + texto + ", es la letra: " + texto[i]);
+		
+	
+	</script>
+
+
+</body>
+</html>
+
+
+
+

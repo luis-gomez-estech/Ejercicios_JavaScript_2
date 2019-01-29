@@ -1,0 +1,80 @@
+	<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicio 31</title>
+	</head>
+	<body>
+		
+		<!-- Crea una función que genere 100 números aleatorios entre 1 y 1000 que no se repitan y luego muestralos por pantalla -->
+
+		<script type="text/javascript">
+
+			/* Para obtener 100 numero aleatorios entre cero y 1000 bastaria con
+
+			for(i=1;i<=10;i++){		
+				
+				var numAleatorio = parseInt((Math.random()*12)+1);
+
+				 	document.write(numAleatorio,", ");
+			}
+
+			Y NOS IMPRIMIRIA 10 NUMEROS ALEATORIOS SEPARADOS POR COMAS (en este caso por comas porque he puesto ", ")
+			PERO no tiene ninguna restriccion para que de esos 100 ninguno sea igual por tanto necesitamos otro paso para filtrar
+
+			*/
+
+			// Con un for voy a ir creando un array de 100 elementos, pero comprobando que no haya ninguno repetido, por tanto, creo un nuevo array
+			// que va a almacenar los valores del random, y asi despues las voy comparando
+
+	        var arrayNumeros = new Array(); // Creo el array dónde se van  a almacenar los 100 numeros aleatorios
+	       
+
+	        for (var i=0;i<100;i++){	// pongo i<100 por son 100 numeros a calcular	      
+		       
+		        var numAleatorio = parseInt((Math.random()*1000)+1); // Aqui pongo el valor de 1000 porque quiero que sea hasta el 1000, y le sumo uno porque quiero que sea desde el 1 al 1000 y no desde el cero
+
+		        // Explicacion debajo(*)
+
+		         if(arrayNumeros.indexOf(numAleatorio)!=-1){
+			            i--; // En caso que sea distinto de -1 o lo que es lo mismo, que si ha entontrado coincidencia, resta un valor a i=0, y le pone i=-1
+			           
+			            } else {
+			            arrayNumeros.push(numAleatorio); // Agregamos al array el número nuevo numAleatorio que se va obteniendo
+			            }
+			}
+
+			 // Ahora con este for, recorremos el arrayNumero que se a creado y lo imprimimos
+
+            for (i=0;i<arrayNumeros.length;i++){
+               	document.write(arrayNumeros[i]+", ");
+               	document.write("<br>");
+            }
+ 
+
+			    // (*) En la primera vuelta del for, crea el primer nmero aleatorio con var numAleatorio = parseInt((Math.random()*12)+1); 
+
+		        // Despues con el if, comprueba con index.Of que en el arrayNumeros, no se encuentre ese primer valor de numAleatorio
+
+		        // index.Of funciona de tal manera que si NO encuentra en un array (arrayNumeros) un valor de un array (numAleatorio), por DEFECTO, es igual -1 (esto lo marca la funcion index.Of)
+
+		        // Si no ha encntrado coincidencia entOnces vale -1, por tanto si es distinto de -1 entonces es que si ha encontrado
+
+		         //entonces nosotros usamos arrayNumeros.indexOf(numAleatorio)!=-1, para decirle que si es distinto de -1, o lo que es lo mismo, que si ha encontrado una coincidencia, que reste a i=0 un valor, pero si no ha encontrado, es decir, si arrayNumeros.indexOf(numAleatorio==-1, con else lo añade al arrayNumeros ha encontrado
+
+		        // Por tanto, en la primera vuelta como no lo encuentra ya que es el primer valor obtenido, se añade el valor al arrayNumeros con arrayNumeros.push(numAleatorio); 
+
+		         // y ya hemos gastado una vuelta del for, por tanto nos quedan 99 vueltas
+
+		        // Si imaginamos que este primer nuemro aleatorio obtenido es un 20, y en la segunda vuelta de nuevo se crea otro nuevo numero aleatorio
+
+		        // con el if, comprueba que ese nuevo valor de numAleatorio no este en arrayNumeros, por tanto, si no encuentra (o lo que es lo mismo se considera -1), entonces con else añade otro numero al arrayNumeros
+
+		          // pero si ese segundo numero es otro 20, entonces va a encontrar la coincidencia, y como ya hemos gastado otra vuelta del for,nos quedan 98 sin embargo no hemos obtenido ningun numero, por tanto le restamos una unidad al valor de i para ponerlo de i=0 a i=-1 y asi tenemos de i=-1 hasta i<98, es decir ya tenems las 99 posiciones o bucles, que necesitamos mas, para completar las 100, ya que una la obtuvimos al principio y ya la guardo el arrayNumero, asi tengo 100 repeticiones en total y no gasto ninguna en las veces que coincide, y esto para todas las veces que encuentre una concidencia, asi vamos perdiendo un vuelta y ganandola de nuevo
+		        
+	</script>
+
+</body>
+</html>
+
+

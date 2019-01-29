@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 22</title>
+</head>
+<body>
+	
+
+	<!-- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado
+ -->	
+
+	<script type="text/javascript">
+		
+		
+		var texto = prompt("Introduce un texto");		
+
+		// Creo un for que recorra el tecto
+
+        for(var i=0;i<texto.length;i++){
+
+			//Si en ese recorrido, i es igual a "a", o "e", o "i", o "o", o "u", imprimimos cual es,
+			// PERO despues del document.write tiene que ir un break; (tiene que ir despues para que cuando se produzca la repeticion que contenga una vocal, se pare y no siga pintando, sigo seguiria pintando vocales que encuentre
+
+			if(texto[i]=="a"||texto[i]=="e"||texto[i]=="i"||texto[i]=="o"||texto[i]=="u") {					
+
+			document.write("La primera vocal de la palabra " + texto + " es: " + texto[i])	
+
+			break; // Aqui esta la clave, si ponemos break, le decimos que en cuanto i sea igual a, "a", o "e", o "i", o "o", o "u" que pare y nos puestre cual ha sido con texto[i]
+			}
+		
+			
+		}
+
+		
+	
+	</script>
+
+</body>
+</html>
+
+
+

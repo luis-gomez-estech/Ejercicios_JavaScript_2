@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 3</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">	
+
+	// Aqui usmaos un buble do while, el cual seguira repitiendo la accion hasta que no pulsemos cancelar	
+
+	 	var todas_palabras = ""; // aqui creamos una variable que recogera los valores de texto introducidos en el do, por eso ponemos que es igual a ""
+
+		do {
+
+		    var texto = prompt("Introduce un texto");
+			    
+		  	todas_palabras = todas_palabras + " - " + texto; // Aqui la variable resultado irá guardando cada vez su valor mas el nuevo introducido y asi sucesivamente mientras sigamos en el buble, por tanto irá cambiando (añadiendo) valores uno seguido del otro, por eso, para separarlo ponemos " - "
+		    
+			//y ahora en el while ponemos confirm para indicarle que nos pregunte, que si queremos seguir introduciendo datos, pues que pulsemos aceptar y volvera al inicio del buble do, o en caso de no querer introducir mas datos, que pulsemos cancelar y saldrá del bucle de pedirnos mas texto 
+			
+		} while (confirm("Introduce otro texto"));
+
+		// Ahora ya imprimimos la variable todas_palabras que ha guardado todos los valores
+	 	
+	 	document.write(todas_palabras);
+
+	</script>
+
+</body>
+</html>

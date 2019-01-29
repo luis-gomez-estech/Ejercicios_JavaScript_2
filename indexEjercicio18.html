@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 18</title>
+</head>
+<body>
+	
+  	<!-- Realiza un script que cuente el número de vocales que tiene un texto. -->	
+
+
+	<script type="text/javascript">
+		
+		var texto = prompt("Introduce una frase");
+
+		var contA= 0; // Aqui creo una variable contador para la letra "a" que inicia desde cero y despues se irá incrementando con contA += 1 si hay alguna "a" (el uno indica que se incrementa de uno en uno)
+		var contE= 0; // Aqui creo una variable contador para la letra "e" que inicia desde cero y despues se irá incrementando con contA += 1, si hay alguna "e"
+		var contI= 0;
+		var contO= 0;
+		var contU= 0;
+
+		//Ahora creo un for que recorra la frase desde el digito primero (por eso ponemos 0 y no 1, al igual que en java) y la recorrera todos sus digitos con length.
+
+        for(var i=0;i<texto.length;i++){
+
+			//Si en ese recorrido, i es igual a "a", la variable contA aunmenta un valor y asi para cada vez que encuentre una "a". En caso de que no tenga nnguna "a" , entonces contA será cero
+
+			if(texto[i]=="a") {
+
+				contA += 1;	// Aqui guardo si tiene alguna vocal "a". Si no tiene valdrá entonces cero, sino el valor de "a" que haya				
+			}
+
+			if(texto[i]=="e") {
+
+				contE += 1;							
+			}
+
+			if(texto[i]=="i") {
+
+				contI += 1;							
+			}
+
+			if(texto[i]=="o") {
+
+				contO += 1;							
+			}
+
+			if(texto[i]=="u") {
+
+				contU += 1;						
+			}
+		}
+
+		if (contA==0&&contE==0&&contI==0&&contO==0&&contU==0) {
+			document.write("La frase " + frase + " no tiene ninguna vocal ")
+		} else {
+			document.write("El texto, " + texto + ", tiene " + (contA + contE + contI + contO + contU) + " vocal/es.")
+		}
+
+		
+	</script>
+	        
+
+</body>
+</html>
+
+
+

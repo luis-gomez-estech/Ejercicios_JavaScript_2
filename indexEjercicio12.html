@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 12</title>
+</head>
+<body>
+
+		<!-- Realiza un script que genere un número aleatorio entre 1 y 99 -->
+
+	<script type="text/javascript">
+
+		// Creamos una nueva variable y lo igualamos a la funcion Math.random() multiplicado por el valor final del rango, en este caso 99, quedando:
+
+		// var numAleatorio = parseInt((Math.random()*99)+1);
+
+		// PERO de esta forma crearia numeros aleatorios entre 0 y 99, pero como nos dice entre 1 y 99, tenemos que sumarle un 1 a la ecuacion Math.random, para que cree valores aleatorios entre 1 y 99.
+
+		// Si nos dijeran entre 1 y 5 pondriamos: var numAleatorio = parseInt((Math.random()*5)+1);, y si fuera entre 0 y 5, var numAleatorio = parseInt((Math.random()*5));
+
+		var numAleatorio = parseInt((Math.random()*99)+1);
+	
+		document.write("Número aleatorio entre 1 y 99: " + numAleatorio);
+
+	</script>	
+	
+</body>
+</html>

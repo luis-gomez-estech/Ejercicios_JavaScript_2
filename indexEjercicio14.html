@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 14</title>
+</head>
+<body>
+
+	<!-- Realiza un script que imprima 14 resultados aleatorios de una quiniela 1 X 2. Ejemplo de resultado: 
+Resultado 1: 1
+Resultado 2: X
+Resultado 3: 2
+.....
+Resultado 14: 2
+ -->
+
+	
+	<script type="text/javascript">
+
+	
+		var i; // Creamos variable para el for
+		
+		// Creamos for que recorra desde 1 hasta 14 para calcular catorce veces un numero aleaotrio, o dicho de otra forma, calcular los catorce numeros aleatorios
+		
+		for (var i=1;i<=14;i++){
+
+			var numero = parseInt((Math.random()*3)+1); // Aqui le decimos que los calcula entre 1 y 3, donde 3 será la X
+
+			// Aqui voy obteniendo los valores de los 14 numeros aleatorios
+
+
+			// Pero para los valores de la variable numero que sean igual a 3, le digo que lo cambie a X.
+		
+			if (numero==3){
+				numero="X";
+			}
+
+			// Por ultimo, imprimo los 14 numeros. Ademas añado "Resultado " + i +", para que imprimala i para que me imprima 1,2,3,4...14
+
+			document.write("Resultado " + i + ": " + numero); 
+
+			document.write("<br>"); 
+			
+		}
+
+		
+	</script>	
+	
+</body>
+</html>
+

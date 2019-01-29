@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 9</title>
+</head>
+<body>
+
+	<!-- Un script que escriba los números del 1 al 500, que indique cuales son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal. Por ejemplo :
+1
+2
+3
+4 (Múltiplo de 4)
+5 ————————————————————- 6
+7
+8 (Múltiplo de 4)
+9 (Múltiplo de 9)
+10
+-->
+
+	<script type="text/javascript">		
+
+		// con un for recorro desde el 1 hasta el 500 incluido por eso pongo i<=500
+
+		for(i=1;i<=500;i++){
+
+			// con if valido que si cada valor de i dividivo entre 4, su resto es cero, nos dira cuales son multiplos de 4
+
+			if(i%4==0){
+				document.write(i + " es múltiplo de 4.")
+				document.write("<br>") // lo añado para que haya salto de linea entre una repetion y otra, si no, nos pintara los resutados unos seguidos de otros
+			}
+
+			// A cada valor de i dividido entre 4, si su resto no es cero, no nos dira nada, lo pondra que numeros son
+
+			else if(i%4!=0&&i%9!=0){
+				document.write(i)
+				document.write("<br>")
+			}
+
+			// con if valido que si cada valor de i dividivo entre 9, su resto es cero, nos dira cuales son multiplos de 9
+
+			if(i%9==0){
+				document.write(i + " es múltiplo de 9.")
+				document.write("<br>")
+			}
+
+			// Para calcular la linea, como nos dice que sea de 5 en 5, pues considero como si fera a los multiplos de 5
+			// y cada valor de i dividido entre 5, si su resto es cero, nos pintara la linea
+
+			if(i%5==0){
+				document.write("<hr>") // Aqui habia puesto guiones, pero despues busque forma de imprimir una linea, y cai en lo mismp que se usa en html
+				document.write("<br>")
+			}
+
+			// A cada valor de i dividido entre 9, si su resto no es cero, no nos dira nada, lo pondra que numeros son
+
+	
+				
+		}
+		
+	</script>	
+	
+</body>
+</html>

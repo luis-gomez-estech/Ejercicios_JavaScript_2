@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 1</title>
+</head>
+<body>
+	
+
+	<script type="text/javascript">
+			
+	// He creado un do while para validar que mientras no se se aun numero o que ese numero no tenga 9 digitos entonces nos va a a pedir de nuevo el nuevo hasta sea correcto
+
+do {
+
+	var edad =prompt("Introduce tu edad");
+
+	// Aqui valido que sea un numero y no una letra lo introducido en teclado
+	if(isNaN(edad)){
+		alert("Error!! Has introducido una letra")
+	}
+
+    //Aqui hago una validación para indicar que que la edad tiene que ser real (un numero positivo)
+	if(edad<1){
+			alert("Introduce un valor real de edad" );
+		}
+		
+} while (isNaN(edad)||edad<1); // Mientras eddad no sea un numero o edad sea menor de 1, el bucle de pedirnos otro numero se va a estar repitiendo, hasta que se valide,
+
+	// Ahora con if compruebo si es mayor o no de 18, 
+	if(edad>=18){
+		alert("Tu edad es de " + edad + " año/s y ya puedes conducir" );
+	} else {
+		alert("Tu edad es de " + edad + " año/s y aún no puedes conducir" );
+	}
+	
+	</script>
+
+
+</body>
+</html>

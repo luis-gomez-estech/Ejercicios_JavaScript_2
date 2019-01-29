@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 19</title>
+</head>
+<body>
+	
+  	<!-- -->	
+
+	<script type="text/javascript">
+
+		    
+	       var frase = prompt("Introduce una frase");
+
+	       var signoInicio = "("; // Aqui declaro la variable que va a ser igual al signo (
+
+	       var signoFinal = ")"; // Aqui declaro la variable que va a ser igual al signo )
+
+	       // Aqui valido y digo que si en la frase no hay ningun (, lo igualo a -1 que  para index.Of significa que no lo ha encontrado, por tanto en ese caso, imprimo Cadena vacia
+
+	       if(frase.indexOf("(")==-1) {
+
+	       	   document.write("Cadena Vacia") 
+
+	       	// pero si lo concuentra, entonces continua
+
+	       	// y si ahora no encuentra el signo ) entonces , realiza el calculo de mostrar desde el parentesis hasta el final
+
+	       }  else if(frase.indexOf(")")==-1) {
+
+	   			var palabrasEntreParentesis = new Array(); // Aqui creamos un nuevo array que guardará los valores que hay entre los parentesis
+
+		       var posicionSignoInicio=frase.indexOf("("); // Aqui creo una variable y le digo con indexOf que si encuentra el texto parentesis abierto ( en la variable frase, que me diga que posicion es
+
+		       // Por ejemplo para la frase  "hola (que) tal, sera igual a 5 que es la posicion donde esta el signo (
+
+		       // Si imprimimos document.write(posicionSignoInicio); nos dice en la posicion que se encuentra el caracrer (
+
+		       
+		       // Ahora con un for recorremos el bucle diciendole que sea desde i=posicionSignoInicio+1, es decir, que recorra el buucle desde la misma posicion que habia encontrado el ( pero mas uno ya que el parentesis no lo queremos incluir, (si quisieramos incluirlo no pondriamos el +1) hasta i<=frase.length, ya que quereos hasta el final, y asi va metiendo  al array palabrasEntreParentesis que habiamos cread, los valores que haya  desde la posicion 6, osea 5+1 para no incluir le parentesis, hasta el final, para despues imprimir solo esas posiciones.
+
+		       for(i=posicionSignoInicio+1;i<=frase.length;i++){
+
+		       // ahora guardamos en el array que habiamos creado cada valor que va encontrando de frase[i] en ese rango de posiciones
+		      
+		       palabrasEntreParentesis.push(frase[i]); 
+
+		       	     	
+		       }   	      
+		       // Por ultimo , imprimo resultado
+		
+		    	document.write(palabrasEntreParentesis)
+
+	   		}
+
+	       // y si encuentra tanto ( como ), entonces, realiza el calculo de mostar el texto que hay entre los parentesis
+
+	        else if (frase.indexOf(")")!=-1) {
+
+		       var palabrasEntreParentesis = new Array(); // Aqui creamos un nuevo array que guardará los valores que hay entre los parentesis
+
+		       var posicionSignoInicio=frase.indexOf("("); // Aqui creo una variable y le digo con indexOf que si encuentra el texto parentesis abierto ( en la variable frase, que me diga que posicion es
+
+		       // Por ejemplo para la frase  "hola (que) tal, sera igual a 5 que es la posicion donde esta el signo (
+
+		       // Si imprimimos document.write(posicionSignoInicio); nos dice en la posicion que se encuentra el caracrer (
+
+		       var posicionSignoFinal=frase.indexOf(")"); // Ahora lo mismo para comprobar en que posicion esta el texto de parentesis cerrado ) en la variable frase, y guarda la posicion (es un valor, por ejemplo la 9 en este caso)
+
+		       // Ahora con un for recorremos el bucle diciendole que sea desde i=posicionSignoInicio+1, es decir, que recorra el buucle desde la misma posicion que habia encontrado el ( pero mas uno ya que el parentesis no lo queremos incluir, (si quisieramos incluirlo no pondriamos el +1) 
+
+		       // y lo mismo con i<=posicionSignoFinal-1, donde le decimos hasta la posicion que habia encontrado el signo ) PERO menos uno ya que tampoco quereos incluir el parentesis y, asi va metiendo  al array palabrasEntreParentesis que habiamos creado, los valores que haya  desde la posicion 6, osea 5+1, hasta la posicion 8 incluida, osea 9-1, para despues imprimir solo esas posiciones.
+
+		       for(i=posicionSignoInicio+1;i<=posicionSignoFinal-1;i++){
+
+		       // ahora guardamos en el array que habiamos creado cada valor que va encontrando de frase[i] en ese rango de posiciones
+		      
+		       palabrasEntreParentesis.push(frase[i]); 
+
+		       	     	
+		       }   	      
+		       // Por ultimo , imprimo resultado
+		
+		    	document.write(palabrasEntreParentesis)
+
+		    // pero si encontro ( pero no encontro ), entonces mouestra desde el primer parentesis hasta el final) 
+
+	   		}
+	    
+
+			// LA VIDAAAA ME HA COSTADO eeje!!!!
+	
+	</script>
+	        
+
+</body>
+</html>
+
+
+

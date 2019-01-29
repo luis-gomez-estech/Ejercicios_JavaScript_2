@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 26</title>
+</head>
+<body>
+	
+  	<!-- Crea una función que devuelva el número PI con dos decimales. Utiliza la variable PI que ya existe en javascript -->	
+
+	<script type="text/javascript">
+
+
+		var Pi=Math.PI; // El numero Pi se representa con Math.Pi por tanto creo una variable y le digo que si valor es Pi
+
+		var piString = Pi.toString(); // Ahora convierto esa variable a string
+
+		// Ahora con for recorro el string piString, y como quiero obtener 3,14, es decir 4 elementos porque la coma tambien se cuenta ya que es un string
+		// entonces ponemos desde el elemento 0 (que es el primer 3) hasta el 3 incluido, para obtener 3,14
+
+		for (i=0;i<4;i++){
+			document.write(piString[i]) // Aqui imprimimos los valores de piString que ha recorrido que sn 3.14
+		}
+
+	</script>
+	        
+
+</body>
+</html>
+
+
+
+
+		

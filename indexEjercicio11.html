@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 11</title>
+</head>
+<body>
+
+
+	<!--  Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor -->
+
+	<script type="text/javascript">
+
+		// Primero pido el nombre y edad de cada persona
+
+		var nombre1 = prompt("Introduce un nombre");		
+		var edad1 = prompt("Introduce su edad edad");
+
+		var nombre2 = prompt("Introduce un nombre");
+		var edad2 = prompt("Introduce su edad");
+
+		var nombre3 = prompt("Introduce un nombre");
+		var edad3 = prompt("Introduce su edad");
+
+		// Y aqui con if comparo edad y las asocio a su nombre para imprimirlo
+
+		if (edad1>edad2&&edad1>edad3) {
+			document.write(nombre1 + " es el mayor de los 3 y tiene " + edad1);
+		}
+		
+		if (edad2>edad1&&edad2>edad3) {
+			document.write(nombre2 + " es el mayor de los 3 y tiene " + edad2);
+		}
+
+		if (edad3>edad1&&edad3>edad2) {
+			document.write(nombre3 + " es el mayor de los 3 y tiene " + edad3);
+		}
+
+	</script>	
+
+
+</body>
+</html>
+

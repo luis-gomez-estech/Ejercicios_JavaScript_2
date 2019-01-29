@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 25</title>
+</head>
+<body>
+	
+  	<!-- Juego Piedra, papel o tijera-->	
+
+	
+	<script type="text/javascript">
+
+	
+
+		// Esto no lo pide pero se me ha ocurrido para usarlo depsues
+
+		var nombre = prompt("¿Cual es tu nombre?");	// Pìdo el nombre del jugador
+
+		// Ahora con do while, le digo que el juego continua hasta que no le escribamos Salir	
+		
+		do
+		{
+
+			var texto = prompt("Introduce piedra, papel o tijera - Escribe SALIR para abandonar el juego");
+
+			texto = texto.toLowerCase(); // Aqui convierto a minuscula para que no sea obligatorio tener que escribir // en minusculas o mayusculas PIEDRA, PAPEL O TIJERA, o  tambien para la palabra SALIR, para que tambien pueda valer salir, Salir, etc etc
+
+			// AHORA creamos la opcion aleatori de pc que va de 1 a 3
+			var opcionAleatoriaPc = parseInt((Math.random()*3)+1);
+
+			// Ahora con if le digo que si sale 1 sea igual a piedra, 2 a papel, y 3 a tijera
+			if(opcionAleatoriaPc==1){
+				var resultPc="piedra";
+			}
+			else if (opcionAleatoriaPc==2){
+				var resultPc="papel";
+			}
+			else {
+				var resultPc="tijera";
+			}
+		
+			//Aqui comparo la opcion del pc junto a la del usuario y segun se cumpla mostrara el resultado
+		if(texto=="piedra"&&resultPc=="piedra"){
+			alert(resultado() + ", EMPATE")
+		}
+
+		if(texto=="piedra"&&resultPc=="papel"){
+			alert(resultado() + ", HAS PERDIDO")
+		}
+
+		if(texto=="piedra"&&resultPc=="tijera"){
+			alert(resultado() + ", HAS GANADO")
+		}
+
+		if(texto=="papel"&&resultPc=="piedra"){
+			alert(resultado() + ", HAS GANADO")
+		}
+
+		if(texto=="papel"&&resultPc=="papel"){
+			alert(resultado() + ", EMPATE")
+		}
+
+		if(texto=="papel"&&resultPc=="tijera"){
+			alert(resultado() + ", HAS PERDIDO")
+		}
+
+		if(texto=="tijera"&&resultPc=="piedra"){
+			alert(resultado() + ", HAS PERDIDO")
+		}
+
+		if(texto=="tijera"&&resultPc=="papel"){
+			alert(resultado() + ", HAS GANADO")
+		}
+
+		if(texto=="tijera"&&resultPc=="tijera"){
+			alert(resultado() + ", EMPATE")
+		}	
+
+		// Una funcion para ahorrar tener que poner el texto en cada if, asi si cambio en un sitio me lo cambia para todos
+		function resultado(){
+			return nombre + " has elegido " + texto + " y el PC " + resultPc
+		}		
+
+
+		} while(texto!="salir"); // Mientras no escribamos salir, sigue el juego
+
+			document.write("Hasta pronto " + nombre + "!!"); // Despido con un mensaje y el nombre del jugador			
+
+	</script>	
+
+</body>
+</html>
+
+
+
+
+
+

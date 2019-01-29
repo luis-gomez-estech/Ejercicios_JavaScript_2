@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 28</title>
+</head>
+<body>
+	
+  	<!-- Crea una función que reciba 2 parámetros, precio e iva, y devuelva el precio con iva incluido. Si no recibe el iva, aplicará el 21 por ciento por defecto.
+ -->	
+
+	<script type="text/javascript">
+
+		// Con do y while creo una primera validacion para comprobar que sea un numero y no una letra el valor del precio
+
+    do{
+
+		var precio = prompt("Introduce precio");
+
+		if(isNaN(precio)){
+			alert("Has introducido una letra " + "(" + precio + ")" + ". Debes introducir un numero")
+		}
+		
+
+	} while (isNaN(precio)); // mientras precio no se aun numero, el buble se repite y volver a pedir el numero
+
+			// Con otro do y while creo una segunda validacion para comprobar que sea un numero y no una letra el valor del iva
+
+	do{
+
+		var iva = prompt("Introduce IVA");
+
+		if(isNaN(iva)){
+			alert("Has introducido una letra " + "(" + iva + ")" + ". Debes introducir un numero")
+		}
+
+		// Si el iva no se introduce y le damos a aceptar, eso equivale a que ese valor es cero, por tanto, con un if le decimos que si iva= 0 entonces iva sea 21
+
+		if(iva==0){
+			iva=21;
+		} else { // pero en caso de que si introduzcamos un valor de iva, entonces adoptará el valor que hemos introducido en el prompt
+			iva=iva
+		}
+
+		var precioTotal=((parseInt(precio)*parseInt(iva))/100)+parseInt(precio);		
+		
+
+	} while (isNaN(iva));
+
+		document.write("El precio total con IVA es: " +precioTotal)
+	
+	</script>
+	        
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		var nota =prompt("Introduce una nota");
+
+		if (nota>=0&&nota<=10) { // aqui hago una validacion para comprobar que se introducen valores desde 0 a 10
+
+			// Ahora ya dependiendo del valor nos dara una nota u otra, pero uso una funcion para que  me devuelva el texto: Tu nota es:...
+			if (nota>=0&&nota<=3){
+				alert(texto() + "Muy deficiente");
+			} 
+
+			if (nota>3&&nota<=4){
+				alert(texto() + "Insuficiente");
+			} 
+
+			if (nota==5&&nota<6){
+				alert(texto() + "Suficiente");
+			} 
+
+			if (nota==6){
+				alert(texto() + "Bien");
+			} 
+
+			if (nota>=7&&nota<=8){
+				alert(texto() + "Notable");
+			} 
+
+			if (nota>=9&&nota<=10){
+				alert(texto() + "Sobresaliente");
+			} 
+
+		} else {
+			document.write("Introduce una nota entre 0 y 10");
+		}
+
+		function texto(){
+			return "Tu nota es: "
+           }
+
+	</script>
+		
+	
+</body>
+</html>

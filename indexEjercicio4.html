@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 4</title>
+</head>
+<body>
+
+	<script type="text/javascript">	
+
+		var suma = 0;  // aqui creamos una variable que recogera los valores de la suma de los numeros introducidos en el prompt, por eso la iniciamos a cero
+
+		do {
+		    
+		    var numero = prompt("Introduce un numero");
+
+		    var result = parseInt(numero); // Aqui convierto el valor a numero entero
+
+		    // Ahora comprobamos si el valor introducido es un numero y esto lo podemos hacer de dos maneras, o bien usando isNaN el cual se usa para validar si una variable NO ES UN NUMERO, y en caso de qu eno lo sea saltará un alert. Tambien podemos usar if (Number(numero) == numero), donde con Number convertimo la cadena de texto a numeros, asi Number("cadena_de_texto"), si tenemos Number("4") lo convierte a un 4, por tanto igualamos Number("cadena_de_texto")==cadena_texto y si se cumple que son iguales, nos lo validara como numero, asi podemos comprobar tambien si en numero.
+
+		    //TAMBIEN, podemos usar el Number para los prompt y en vez de recoger los datos como cadena de texto, los cojemos como numeros de esta manera: 
+		    // var numero = Number(prompt("Introduce un numero"));
+
+		    if (isNaN(result)){ 
+		     
+		    	alert(numero + " no es un numero");		        	
+		   	 
+		    // pero si en cambio si es un numero, entonces nos almacene y en este caos al ser numeros nos vaya sumando cada numero introducido
+
+		   	} else { 
+
+  			suma = suma + result;
+
+		   	}
+		   	
+		//y ahora en el while ponemos confirm para indicarle que nos pregunte, que si queremos seguir introduciendo numero, pues que pulsemos aceptar y volvera al inicio del buble do, o en caso de no querer introducir mas numeros, que pulsemos cancelar y saldrá del bucle de pedirnos mas numeros 
+
+		} while (confirm("Introduce otro numero para añadirlo a la suma"));
+
+		// Aqui imprimimos el resultado de la suma
+
+		document.write(suma);
+
+	</script>
+	
+</body>
+</html>
+
+

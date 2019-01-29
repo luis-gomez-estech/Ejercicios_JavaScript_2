@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 27</title>
+</head>
+<body>
+	
+  	<!-- Crea una función que reciba un parámetro, un dni, y devuelva la letra del mismo. Si el dni pasado tiene algún error devolverá “”. -->	
+
+  	<!-- La letra del dni se obtiene de dividir el numero entre 23, y el valor que tenga el resto que estara entre 0 y 22 y usando esta tabla determina la letra
+
+0 	1 	2 	3 	4 	5 	6 	7 	8 	9 	10 	11 	12 	13 	14 	15 	16 	17 	18 	19 	20 	21 	22
+T 	R 	W 	A 	G 	M 	Y 	F 	P 	D 	X 	B 	N 	J 	Z 	S 	Q 	V 	H 	L 	C 	K 	E
+
+-->
+
+	<script type="text/javascript">
+
+		// ESTE EJERCICIO ES COMO EL NUMERO 5, solo cambia que si hay un error tanto de que se introduzca una letra como de que se introduzca un numero que no tenga 9 digitos, entonces nos salatrá el aviso de "".
+
+		// Antes de nada valido con do y while, que el dni intoducido sea un numero de 8 cifras
+
+	do { 
+
+		var dni = prompt("Introduce tu dni");
+
+	    // Si dni no es un numero (isNan), nos avisa y nos deja volver a introducir el valor
+
+	 	if (isNaN(dni)){ 
+		     
+		   	alert(" \" \" ");	
+		}
+
+		// Si dni no tiene 8 cifras, nos avisa y nos deja volver a introducir el valor
+
+		if (dni>99999999||dni<10000000){ 
+		     
+		  	alert(" \" \" ");	
+		}
+
+
+	} while (isNaN(dni)||dni>99999999||dni<10000000); // Mientras dni no sea un numero o no sea un numero de 8 cifras, el blucle de pedirnos el dni se repite
+
+		// Una vez el dni introducido es correcto (un numero de 8 cifras), calculamos el resto de la division
+
+	 	var resto=dni%23;
+
+	 	// Creo un array con todas las letras
+	 	 
+	 	var letra = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+
+	 	// recorro el array y como una vez recorrio, i=1,2,3,4,5,6,7,8....22, y letra[i]=T 	R 	W 	A 	G 	M 	Y 	F 	P 	D 	X 	B 	N 	J 	Z 	S 	Q 	V 	H 	L 	C 	K 	E
+	 	// Entonces con un if le digo que para la posicion i que es igual que el resto, que a la variable letra2 le ponga el valor de esa posicion 
+	 	
+ 		for(i=0;i<letra.length;i++){ 
+
+		 	if(resto==i){
+		 		var letra2=letra[i] // letra2 almacenará el valor d ela letra correcta segun la posicion y valor de i
+		 	}		
+ 		
+ 		}
+
+ 		document.write("Su dni completo es: " + dni + letra2)
+
+  </script>
+ 		        
+
+</body>
+</html>
+
+
+

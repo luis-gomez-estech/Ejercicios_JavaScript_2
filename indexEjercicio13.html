@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 13</title>
+</head>
+<body>
+
+	<!-- Genera 3 números aleatorios entre 1 y 99 pero que no se repita ninguno -->
+
+	<script type="text/javascript">
+
+		// Creamos una nueva variable y lo igualamos a la funcion Math.random() multiplicado por el valor final del rango, en este caso 99, quedando:
+
+		// var numAleatorio = parseInt((Math.random()*99)+1);
+
+		// PERO de esta forma crearia numeros aleatorios entre 0 y 99, pero como nos dice entre 1 y 99, tenemos que sumarle un 1 a la ecuacion Math.random, para que cree valores aleatorios entre 1 y 99.
+
+		var numAleatorio1 = parseInt((Math.random()*99)+1);
+
+		// Ahora con un DO WHILE va a calcular el segundo numero aleatorio, y lo va a estar calculando mientras el numeroAleatorio2 sea igual que el numeroAleatorio1
+		do
+		{
+			var numAleatorio2 = parseInt((Math.random()*99)+1);
+
+		} while(numAleatorio2==numAleatorio1); // Mientras el numeroAleatorio2 obtenido sea igual que el numeroAleatorio1, va a estar repitiendo el bule de buscar el segundo numero aleatorio
+
+		// y para calcular el tercer numero aleatorio lo mismo, con un DO WHILE mientras el numeroAleatorio3 sea igual que el numeroAleatorio2 o el numeroAleatorio3 sea igual que e¡ numeroAleatorio1
+		do
+		{
+			var numAleatorio3 = parseInt((Math.random()*99)+1);
+
+		} while(numAleatorio3==numAleatorio2||numAleatorio3==numAleatorio1);
+
+	
+		document.write("Los tres numeros aleatorios generados son: " + numAleatorio1 + ", " + numAleatorio2 + ", " + numAleatorio3);
+			
+
+	</script>	
+	
+</body>
+</html>

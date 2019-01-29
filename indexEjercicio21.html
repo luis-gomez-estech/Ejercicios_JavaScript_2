@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 21</title>
+</head>
+<body>
+	
+
+	
+  	<!-- Realiza un script que pida un texto e indique si es un palíndromo. Ejemplo de palín- dromo: “Dabale arroz a la zorra el abad” -->	
+
+	<script type="text/javascript">
+
+      var frase = prompt ("Introduce una palabra o frase");
+
+      // Primero como tenemos una mayuscula, para no tener problemas con la comparacion, convierto todo en minusculas
+      frase = frase.toLowerCase();
+
+      // Lo siguiente seria crear un array nuevo, el cual se obtiene de recorrer el array frase al reves, para despues comparar ambos y ver si coinciden los valores en la posicion de i, pero antes hay que eliminar los espacios en blanco, sino no va a poder comparar bien, ya que cuando recorramos el array al reves tambien nos va a colocar los espacios
+
+      // Por tanto, creo un array vacio que se va a llenar mediante un for in, el cual va a recorrer el array frase, y donde NO encuentre un espacio, " ", va a ir creando el array y va a ir poniendo cada valor de i que encuentre que no se aun espacio
+
+      var textoSinEspacios = "";
+
+      for (i in frase){
+        if(frase[i] != " "){
+        textoSinEspacios += frase[i];
+        }
+      }
+
+    // Aqui creo otro nuevo array con los datos obtenidos en el for in, eso si he tenido que converttr en array cn split, pero ha sido despues de probar y probar, pero no entiendo porque, si el array textoSinESpacios ya es un array no???
+
+    var soloLetras = textoSinEspacios.split("");
+
+    // Ahora creo otro array con los datos obtenidos en el for in pero al reves, y lo hago con reverse
+    var letrasReves = textoSinEspacios.split("").reverse();
+
+    //ahora creo una variable boolean que inicializo en true
+    var esIgual = true;
+
+
+    // Ahora con un for in recorro el array soloLetras y le digo  que si cada posicion i del array soloLetras es distinta a cada posicion de i del array letrasReves, la variable igual vale false y con un break salimos del bucle, y en caso de que sena iguales en todas las posiciones, con else le decimos que igual es igual a true
+    for(i in soloLetras){
+
+        if (soloLetras[i] != letrasReves[i]){
+        
+          esIgual = false;
+          break;
+        
+        } else {
+          esIgual = true;
+        }      
+    }
+
+    // Por ultimo, segun el valor de igual, imprimimos si lo es o no
+    if(esIgual==true){
+      document.write ('El texto introducido es, palindromo');    
+    }
+    else{
+      document.write ('El texto introducido no es, palindromo');    
+    }
+ 
+
+	</script>
+	        
+
+</body>
+</html>
+
+

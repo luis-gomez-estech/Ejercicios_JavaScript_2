@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 10</title>
+</head>
+<body>
+
+	<!--  Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1. -->
+
+<script type="text/javascript">
+
+ // ESTE EJERCICIO NO HE SABIDO SACARLO SIN MIRAR VARIOS EJEMPLOS, es el unico de los 31 que no sabia por donde empezar, pero este metodo es el que mas me ha gustado y mas entendible, asi que lo que he hecho a sido entenderlo y ya lo conservo para futuras consultas si alguna vez necesito hacerlo 
+
+// En primer lugar, se pide el numero de filas y columnas
+
+    var filas = prompt("Introduce numero de filas");
+
+    var columas = prompt("Introduce numero de columnas");
+
+    // Ahora por otro lado calculamos el numero total de celdas y la guardamos en la variable celdasTotal
+    var celdasTotal = filas * columas;
+
+    // Ahora se empieza a construir la tabla y lo primero es poner un <table border> para que nos lo imprima y ahora vamos a ir rellenandola
+    document.write("<table border>");
+
+    // Ahora ocn un for se recorren las filas 
+    for (var i = 0; i < filas; i++) {
+    
+         //y por cada fila se pone un <tr> para pintar las filas
+        document.write("<tr>");
+    
+            //ahora dentro del for de filas creamos otro for que recorre las columnas
+            for (var j = 0; j < columas; j++) {
+
+            //y por cada fila se pone un <td> para pintar la primera columna
+            document.write("<td>");
+
+            // e imprimimos el valor de celdasTotal para que aparezca en la celda (en primer lugar el valor maximo, ya que se tiene que ir imprimiendo el numero total en forma decreciente
+           
+            document.write(celdasTotal);
+
+            // Ahora a celdasTotal le restamos un valor para que el la proxima vuelta escrima un numero menos y asi hasta 1
+            
+            celdasTotal--;
+
+            //Por ultimo, escribimos un </td> para cerrar la celda y se acaba el primer bucle
+            document.write("</td>");
+            }
+    
+        //Ahora cerramos la fila con </tr> y acaba el segundo bucle y asi hasta se complete la tabla
+        document.write("</tr>");
+
+    }
+
+    // Una vez se acaban los bucles, cerramos la tabla con </table>
+    document.write("</table>");
+    
+
+</script>
+		
+	
+	
+</body>
+</html>

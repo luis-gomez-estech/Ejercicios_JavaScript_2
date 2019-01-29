@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 15</title>
+</head>
+<body>
+
+	
+
+	<!-- Realiza el script anterior pero con la probabilidad de que salga el 1 sea del 60%, la de la X del 30% y la del 2 del 10% -->
+	
+<script type="text/javascript">
+
+	// creo un array con todas las posibilidades, es decir, como dice que el 1 en relacion a 10, tiene que salir minimo 6 veces (60%)
+	// y que la X un 30%, osea minimo 3 veces, y que la de 2 sea de 10%, o sea minimo 1 vez, creo un array con 6 unos, 3 treses y un 2.
+
+var opciones=["1","1","1","1","1","1","X","X","X","2"];
+
+// Ahora con un for y mediante Math.random(),  creo los 14 numeros aleatorios leyendolos desde el array opciones y los imprimo
+
+for (var i=1;i<=14;i++){
+
+	var numero = opciones[Math.floor(Math.random()*opciones.length)];		
+	
+document.write("Resultado " + i + ": " + numero +"<br>");
+
+}
+
+
+	</script>	
+
+</body>
+</html>
+
+
+<!-- 	var i; // Creamos variable para el for
+	var contador=0;
+		// Creamos for que recorra desde 1 hasta 14 para calcular catorce veces un numero aleaotrio, o dicho de otra forma, calcular los catorce numeros aleatorios
+		var contadorUnos= 0; // Aqui creo una variable contador para contar unos que inicia desde cero y despues se irá incrementando con contA += 1 si hay alguna "a" (el uno indica que se incrementa de uno en uno)
+		var contadorDoses= 0; 
+		var contadorEquis= 0; 
+		
+
+	var arrayNumeros = new Array(); 
+do{
+		for (var i=1;i<=14;i++){
+
+			var numero = parseInt((Math.random()*3)+1); // Aqui le decimos que los calcula entre 1 y 3, donde 3 será la X
+
+			if (numero==3){
+				numero="X";
+			}
+			
+			//lo  convierto en array
+			arrayNumeros.push(numero); 
+		
+		}
+
+		   for(var i=0;i<arrayNumeros.length;i++){
+
+				//Si en ese recorrido, i es igual a "a", la variable contA aunmenta un valor y asi para cada vez que encuentre una "a". En caso de que no tenga nnguna "a" , entonces contA será cero
+
+				if(arrayNumeros[i]==1) {
+
+					contadorUnos += 1;	// Aqui guardo si tiene alguna vocal "a". Si no tiene valdrá entonces cero, sino el valor de "a" que haya				
+				}
+
+				else if(arrayNumeros[i]==2) {
+
+					contadorDoses += 1;							
+				}
+
+				else if(arrayNumeros[i]=="X") {
+
+					contadorEquis += 1;							
+				}
+
+			
+			}
+
+		}while (contadorUnos<6&&contadorEquis>1);
+
+		document.write("Resultado " + arrayNumeros)
+		document.write("<br>")
+		document.write("contador de unos: " + contadorUnos)
+		document.write("<br>")	
+		document.write("contador de doses " + contadorDoses)
+		document.write("<br>")	
+		document.write("contador de Equis " + contadorEquis)
+
+
+		-->

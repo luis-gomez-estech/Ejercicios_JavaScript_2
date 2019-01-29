@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 6</title>
+</head>
+<body>
+
+<!--Realiza un script que escriba una pirámide del 1 al 30 de la siguiente forma : 1
+22
+333
+4444
+55555
+666666
+
+-->
+
+	<script type="text/javascript">
+
+		var i;
+		var repite;
+
+		// primero creo un for para recorrer  los numeros del 1 al 30
+
+		for (var i=1;i<=30;i++){
+
+			//ahora otro segundo for, para cada numero i que va encontrando en el for anterior, va a repetir su valor el numero de veces segun su valor
+
+			for (var repite=0;repite<i;repite++){
+
+			// Aqui mprimimos los numeros repetidos cada uno segun su valor, pero salen todos en linea y sin espacios
+
+			document.write(i);
+
+			}
+
+		// Pero ahora añadimos <br> para que cada repeticion de cada numero se pinte en una linea diferente, asi creamos la piramide
+	
+		document.write("<br>");
+
+		}		
+	
+   	</script>
+
+	
+</body>
+</html>

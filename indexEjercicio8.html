@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 8</title>
+</head>
+<body>
+
+	<!-- QUEDA PENDIENTE PROBARLO CON DO, WHILE PARA QUE HASTA QUE NO SE INTRODUZCA UN NUMERO MENOR DE 50, SIGA PIDIENDO POR TECLADO QUE METAMOS UN NUMERO MENOR DE 50-->
+
+<!-- Crea script para generar pirámide siguiente con los números del 1 al número que indi- que el usuario (no mayor de 50) :
+1
+12
+123
+1234
+12345
+123456
+......
+
+ -->
+
+
+<script type="text/javascript">
+
+	do {
+
+			var numero = prompt("Introduce el numero final");
+			var i;
+			var repite;	
+
+			if(numero>50||numero<2) {
+
+			alert("El numero debe ser menor de 50 y mayor de 1");
+			
+
+			} else {
+
+
+			for (var i=1;i<=numero;i++){
+
+			//ahora otro segundo for, va a recorrer cada valor de i y va a ir leyendo en cada vuelta numeros del 1 al valor de i
+
+				for (var repite=1;repite<=i;repite++){
+
+				// Aqui imprimimos cada uno segun su valor, pero salen todos en linea y sin espacios
+
+				document.write(repite);
+
+				}
+
+				// Pero ahora añadimos <br> para que cada repeticion de cada numero se pinte en una linea diferente, asi creamos la piramide
+	
+				document.write("<br>");
+
+			}
+		}
+
+		} while (numero>50||numero<2);
+					
+
+	
+	</script>
+	
+</body>
+</html>
+
+
